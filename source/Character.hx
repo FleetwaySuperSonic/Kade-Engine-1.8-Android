@@ -97,6 +97,20 @@ class Character extends FlxSprite
 				barColor = 0xFFaf66ce;
 
 				playAnim('idle');
+			case 'mickey.avi':
+				tex = Paths.getSparrowAtlas('sadmousephobia_assets', 'shared', true);
+				frames = tex;
+				animation.addByPrefix('idle', 'Sadmouse Idle', 24, false);
+				animation.addByPrefix('singUP', 'Sadmouse Up', 24, false);
+				animation.addByPrefix('singRIGHT', 'Sadmouse Right', 24, false);
+				animation.addByPrefix('singDOWN', 'Sadmouse Down', 24, false);
+				animation.addByPrefix('singLEFT', 'Sadmouse Left', 24, false);
+				animation.addByIndices('idleLoop', "Sadmouse Idle", [11, 12], "", 12, true);
+
+				loadOffsetFile(curCharacter);
+				barColor = 0xFFaf66ce;
+
+				playAnim('idle');
 			case 'spooky':
 				tex = Paths.getSparrowAtlas('spooky_kids_assets', 'shared', true);
 				frames = tex;
