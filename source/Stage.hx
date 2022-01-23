@@ -411,6 +411,17 @@ class Stage extends MusicBeatState
 						add(waveSpriteFG);
 					 */
 				}
+			case 'mickeyStage':
+			         {
+			          camZoom = 0.9;
+					curStage = 'mickeyStage';
+					var Street:FlxSprite = new FlxSprite(-600, -200).loadGraphic(Paths.loadImage('Street', 'shared'));
+					Street.antialiasing = FlxG.save.data.antialiasing;
+					Street.scrollFactor.set(0.9, 0.9);
+					Street.active = false;
+					swagBacks['Street'] = Street;
+					toAdd.push(Street);
+			     }
 			default:
 				{
 					camZoom = 0.9;
