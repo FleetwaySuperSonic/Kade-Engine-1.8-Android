@@ -39,6 +39,8 @@ class HealthIcon extends FlxSprite
 	{
 		if (char != 'bf-pixel' && char != 'bf-old')
 			char = char.split("-")[0];
+		if (char != 'mickey.avi' && char != 'dad')
+			char = char.split("-")[0];
 
 		if (!OpenFlAssets.exists(Paths.image('icons/icon-' + char)))
 			char = 'face';
